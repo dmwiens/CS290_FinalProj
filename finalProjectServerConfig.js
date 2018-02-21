@@ -9,40 +9,20 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 32180);
+app.set('port', 3000);
 
 
-// GET handler
+// Page handler
 app.get('/',function(req,res){
-  var qParams = [];
-  for (var p in req.query){
-    qParams.push({'name':p,'value':req.query[p]})
-  }
-
   var context = {};
-  context.dataList = qParams;
 
-  res.render('get-loopback', context);
+  res.render('pageMain', context);
 });
 
-// POST handler
-app.post('/', function(req,res){
-
-  var qParams = [];
-  for (var p in req.query){
-    qParams.push({'name':p,'value':req.query[p]})
-  }
-
-  var bParams = [];
-  for (var p in req.body){
-    bParams.push({'name':p,'value':req.body[p]})
-  }
-
+app.get('/pageSub1',function(req,res){
   var context = {};
-  context.getDataList = qParams;
-  context.postDataList = bParams;
 
-  res.render('post-loopback', context);
+  res.render('pageSub1', context);
 });
 
 app.use(function(req,res){
