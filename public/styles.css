@@ -1,0 +1,39 @@
+body {
+	background: url(tempbackground-2.jpg); 
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+	background-size: 100% 100%;
+	background-color: black;
+
+	font-family: Helvetica;
+
+	color = white;
+}
+
+
+#title
+{
+	color: lightgrey;
+}
+
+.navitem
+{
+	color: lightgrey;
+}
+
+
+.scrollingtextbox
+{
+	height:120px;
+	width:120px;
+	border:1px solid #ccc;
+	font:16px/26px Georgia, Garamond, Serif;
+	overflow:auto;
+}
+
+
+.footeritem
+{
+	color: grey;
+}
