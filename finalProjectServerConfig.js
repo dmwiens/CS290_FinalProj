@@ -10,19 +10,32 @@ app.use(bodyParser.json());
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', 3000);
+app.use(express.static('public'));
 
 
-// Page handler
+// Page handlers
 app.get('/',function(req,res){
   var context = {};
-
+  context.pageTitle = "Mexico 2018";
   res.render('pageMain', context);
 });
 
-app.get('/pageSub1',function(req,res){
+app.get('/s1SanCristobal',function(req,res){
   var context = {};
+  context.pageTitle = "San Cristobal de las Casas, Chiapas";
+  res.render('s1SanCristobal', context);
+});
 
-  res.render('pageSub1', context);
+app.get('/s2Palenque',function(req,res){
+  var context = {};
+  context.pageTitle = "Palenque, Chiapas";
+  res.render('s2Palenque', context);
+});
+
+app.get('/s3Tulum',function(req,res){
+  var context = {};
+  context.pageTitle = "Tulum, Quintana Roo";
+  res.render('s3Tulum', context);
 });
 
 app.use(function(req,res){

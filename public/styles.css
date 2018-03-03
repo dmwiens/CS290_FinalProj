@@ -7,17 +7,15 @@ body {
 	background-color: black;
 
 	font-family: Helvetica;
-
-	color = white;
 }
 
 
-#title
+h1
 {
 	color: lightgrey;
 }
 
-.navitem
+nav a
 {
 	color: lightgrey;
 }
@@ -33,7 +31,7 @@ body {
 }
 
 
-.footeritem
+footer a
 {
 	color: grey;
 }
