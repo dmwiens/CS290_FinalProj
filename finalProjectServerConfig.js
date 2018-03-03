@@ -38,6 +38,19 @@ app.get('/s3Tulum',function(req,res){
   res.render('s3Tulum', context);
 });
 
+
+app.get('/f1AboutThisSite',function(req,res){
+  var context = {};
+  context.pageTitle = "About this Site";
+  res.render('f1AboutThisSite', context);
+});
+
+app.get('/f2Credits',function(req,res){
+  var context = {};
+  context.pageTitle = "Credits";
+  res.render('f2Credits', context);
+});
+
 app.use(function(req,res){
   res.status(404);
   res.render('404');
